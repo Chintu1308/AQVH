@@ -304,35 +304,30 @@ function App() {
           </div>
           
           <div className="relative max-w-5xl mx-auto">
+            {/* Video Container with Quantum Effects */}
             <div className="relative group">
               {/* Outer Glow */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 pointer-events-none"></div>
               
-              {/* Coming Soon Container */}
-              <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl border border-blue-400/30 group-hover:border-blue-400/60 transition-all duration-300">
-                <div className="aspect-video flex flex-col items-center justify-center p-12">
-                  {/* Quantum Loading Animation */}
-                  <div className="relative mb-8">
-                    <div className="w-24 h-24 border-4 border-blue-400/20 rounded-full animate-spin">
-                      <div className="absolute top-0 left-0 w-6 h-6 bg-blue-400 rounded-full animate-pulse"></div>
-                    </div>
-                    <div className="absolute inset-0 w-24 h-24 border-4 border-cyan-400/20 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '3s' }}>
-                      <div className="absolute bottom-0 right-0 w-4 h-4 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-3xl font-bold text-blue-400 mb-4">Quantum State: Loading</h3>
-                  <p className="text-gray-400 text-lg text-center max-w-md">
-                    Highlights are currently in <span className="text-cyan-400">superposition</span>. 
-                    They will collapse into reality shortly after the event.
-                  </p>
-                  
-                  {/* Quantum Dots */}
-                  <div className="flex space-x-2 mt-8">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full animate-bounce"></div>
-                    <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
-                  </div>
+              {/* Video Frame */}
+              <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-purple-400/30 group-hover:border-purple-400/60 transition-all duration-300 pointer-events-auto">
+                <div className="aspect-video">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/4B3yaHoeSt4?si=UxgDVq23NEzzZOvT"
+                    title="AQVH Semi Finals - Quantum Transmission"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                
+                {/* Quantum Border Animation */}
+                <div className="absolute inset-0 rounded-2xl pointer-events-none">
+                  <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse"></div>
+                  <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
+                  <div className="absolute left-0 top-0 w-px h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  <div className="absolute right-0 top-0 w-px h-full bg-gradient-to-b from-transparent via-blue-400 to-transparent animate-pulse" style={{ animationDelay: '1.5s' }}></div>
                 </div>
               </div>
             </div>
