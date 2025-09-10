@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AQVH Semi Finals - Quantum Hackathon</title>
+    <meta name="description" content="AQVH Semi Finals - Enter the Quantum Realm where computing transcends reality">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #000;
+        overflow-x: hidden;
+      }
+      
+      /* Custom Quantum Animations */
+      @keyframes quantumFloat {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        33% { transform: translateY(-10px) rotate(120deg); }
+        66% { transform: translateY(5px) rotate(240deg); }
+      }
+      
+      @keyframes quantumPulse {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+      
+      @keyframes quantumWave {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100vw); }
+      }
+      
+      .quantum-float {
+        animation: quantumFloat 6s ease-in-out infinite;
+      }
+      
+      .quantum-pulse {
+        animation: quantumPulse 3s ease-in-out infinite;
+      }
+      
+      .quantum-wave {
+        animation: quantumWave 8s linear infinite;
+      }
+      
+      /* Quantum Glow Effects */
+      .quantum-glow {
+        filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
+      }
+      
+      .quantum-text-glow {
+        text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+      }
+      
+      /* Scrollbar Styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #00ffff, #9333ea);
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #00ffff, #a855f7);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
